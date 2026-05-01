@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>Dashboard</title>
-    </head>
-    <body>
-        <div id="grad"></div>
-        <h1 id="greeting"></h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-        <script src="script.js"></script>
-    </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div id="grad"></div>
+
+    <h1 id="greeting"></h1>
+
+    <div class="card-row">
+
+        <div class="card time-card">
+            <p id="time-text"></p>
+        </div>
+
+        <div class="card weather-card">
+            <div class="weather-content">
+                <div id="weather-emoji"></div>
+
+                <div class="weather-info">
+                    <div id="weather-location"></div>
+                    <div id="weather-temp"></div>
+                    <div id="weather-wind"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
