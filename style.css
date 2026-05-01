@@ -6,16 +6,119 @@ html, body {
     font-family: "Montserrat", sans-serif;
 }
 
+/* Background */
 #grad {
     position: fixed;
     inset: 0;
     background: linear-gradient(to bottom right, #3162d4, #8B2DCF);
 }
 
+/* Greeting */
 #greeting {
     position: relative;
     z-index: 10;
     color: white;
     text-align: center;
+    margin-top: 25px;
     text-shadow: 2px 2px #363737;
+}
+
+/* Row layout (THIS replaces all left/right guessing) */
+.card-row {
+    position: absolute;
+    top: 150px;
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Base card */
+.card {
+    width: 250px;
+    height: 150px;
+
+    background: white;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 20px #363737;
+
+    padding: 10px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #363737d9;
+}
+
+.time-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Time card text */
+.time-card p {
+    position: relative;
+    margin: 0;
+    font-size: 30px;
+    color: #000;
+    line-height: 1.4;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Weather card (wider like you wanted) */
+.weather-card {
+    width: 450px;   /* was 400 */
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/* layout container */
+.weather-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 15px;
+}
+
+/* BIG emoji on the left */
+#weather-emoji {
+    font-size: 80px;   /* was ~64 */
+    width: 45%;
+    text-align: center;
+}
+
+/* right side stack */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* location (bold + slightly bigger) */
+#weather-location {
+    font-size: 24px;   /* was ~20 */
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* temp + wind */
+#weather-temp {
+    font-size: 20px;   /* bigger */
+    font-weight: 600;  /* semi-bold */
+    line-height: 1.4;
+}
+
+#weather-wind {
+    font-size: 17px;
+    opacity: 0.8;      /* subtle hierarchy */
 }
