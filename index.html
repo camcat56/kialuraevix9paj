@@ -3,41 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-
-    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <div id="grad"></div>
+<div id="grad"></div>
 
-    <h1 id="greeting"></h1>
+<h1 id="greeting"></h1>
 
-    <div class="card-row">
+<!-- MAIN CARDS -->
+<div class="card-row">
 
-        <div class="card time-card">
-            <p id="time-text"></p>
-        </div>
-
-        <div class="card weather-card">
-            <div class="weather-content">
-                <div id="weather-emoji"></div>
-
-                <div class="weather-info">
-                    <div id="weather-location"></div>
-                    <div id="weather-temp"></div>
-                    <div id="weather-wind"></div>
-                </div>
-            </div>
-        </div>
-
+    <div class="card time-card">
+        <p id="time-text"></p>
     </div>
 
-    <script src="script.js"></script>
+    <div class="card weather-card">
+        <div class="weather-content">
+            <div id="weather-emoji"></div>
+
+            <div class="weather-info">
+                <div id="weather-location"></div>
+                <div id="weather-temp"></div>
+                <div id="weather-wind"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="lower-row">
+    <div class="lower-box" id="quote-card"></div>
+    <div class="lower-box" id="word-card"></div>
+</div>
+
+<!-- QUICK ROW -->
+<div class="quick-row">
+
+    <!-- Spotify -->
+    <a href="https://open.spotify.com" target="_blank" class="quick-item">
+        <div class="quick-card">
+            <img src="images/spotify-color-svgrepo-com.svg" class="icon" id="icon-spotify">
+        </div>
+        <span>Spotify</span>
+    </a>
+
+    <!-- Steam -->
+    <a href="https://store.steampowered.com" target="_blank" class="quick-item">
+        <div class="quick-card">
+            <img src="images/steam-svgrepo-com.svg" class="icon" id="icon-steam">
+        </div>
+        <span>Steam</span>
+    </a>
+
+    <!-- Files -->
+    <a href="https://youtube.com" target="_blank" class="quick-item">
+        <div class="quick-card">
+            <img src="images/youtube-svgrepo-com.svg" class="icon" id="icon-youtube">
+        </div>
+        <span>YouTube</span>
+    </a>
+
+    <!-- Browser -->
+    <a href="https://discord.com/channels/@me" target="_blank" class="quick-item">
+        <div class="quick-card">
+            <img src="images/discord-svgrepo-com.svg" class="icon" id="icon-discord">
+        </div>
+        <span>Discord</span>
+    </a>
+
+    <!-- Gallery -->
+    <a href="https://wikipedia.org" target="_blank" class="quick-item">
+        <div class="quick-card">
+            <img src="images/wikipedia-logo-svgrepo-com.svg" class="icon" id="icon-wikipedia">
+        </div>
+        <span>Wikipedia</span>
+    </a>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
