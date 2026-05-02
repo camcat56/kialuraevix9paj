@@ -2,11 +2,10 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     font-family: "Montserrat", sans-serif;
+    overflow: hidden;
 }
 
-/* Background */
 #grad {
     position: fixed;
     inset: 0;
@@ -19,15 +18,14 @@ html, body {
     z-index: 10;
     color: white;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 45px;
     text-shadow: 2px 2px #363737;
 }
 
-/* Row layout (THIS replaces all left/right guessing) */
+/* Cards */
 .card-row {
     position: absolute;
     top: 150px;
-
     left: 0;
     right: 0;
 
@@ -36,7 +34,6 @@ html, body {
     gap: 50px;
 }
 
-/* Base card */
 .card {
     width: 250px;
     height: 150px;
@@ -48,7 +45,7 @@ html, body {
 
     padding: 10px;
 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: 0.2s;
 }
 
 .card:hover {
@@ -56,48 +53,41 @@ html, body {
     box-shadow: 0 12px 25px #363737d9;
 }
 
+/* Time */
 .time-card {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-/* Time card text */
 .time-card p {
     position: relative;
     margin: 0;
-    font-size: 30px;
+    font-size: 28px;
     color: #000;
     line-height: 1.4;
     text-align: center;
     justify-content: center;
 }
 
-/* Weather card (wider like you wanted) */
+/* Weather */
 .weather-card {
-    width: 450px;   /* was 400 */
+    width: 450px;
 }
 
-.bold {
-    font-weight: 600;
-}
-
-/* layout container */
 .weather-content {
     display: flex;
     align-items: center;
-    height: 100%;
     gap: 15px;
+    height: 100%;
 }
 
-/* BIG emoji on the left */
 #weather-emoji {
-    font-size: 80px;   /* was ~64 */
+    font-size: 80px;
     width: 45%;
     text-align: center;
 }
 
-/* right side stack */
 .weather-info {
     display: flex;
     flex-direction: column;
@@ -121,4 +111,115 @@ html, body {
 #weather-wind {
     font-size: 17px;
     opacity: 0.8;      /* subtle hierarchy */
+}
+
+/* Quick row */
+.quick-row {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.quick-item {
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cards */
+.quick-card {
+    width: 70px;
+    height: 70px;
+
+    background: white;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 20px #363737;
+    transition: 0.2s;
+}
+
+.quick-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #363737d9;
+}
+
+/* SVG FIX */
+.icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+#icon-steam {
+  transform: scale(1.1275); /* instead of changing width/height */
+}
+
+#icon-youtube {
+    transform: scale(1.15)
+}
+
+#icon-discord {
+    transform: scale(1.5);
+}
+
+/* Labels */
+.quick-item span {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/* LOWER ROW */
+.lower-row {
+    position: absolute;
+    top: 350px;
+
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Base box style */
+.lower-box {
+    height: 80px;
+
+    background: white;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 20px #363737;
+
+    transition: 0.2s;
+}
+
+.lower-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #363737d9;
+}
+
+/* Width control */
+#quote-card {
+    width: 415px;
+    height: 100px;
+}
+
+#word-card {
+    width: 315px;
+    height: 160px;
 }
